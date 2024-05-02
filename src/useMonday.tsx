@@ -8,7 +8,6 @@ const monday = mondaySdk();
 
 export default function useMonday() {
   const [url, setUrl] = useState("");
-  const [isValid, setIsValid] = useState(false);
   const [theme, setTheme] = useState("light");
   const [width, setWidth] = useState(300);
   const [height, setHeight] = useState(600);
@@ -25,21 +24,5 @@ export default function useMonday() {
     });
   }, []);
 
-  useEffect(() => {
-    async function checkUrl() {
-      try {
-        const res = await fetch(url, { mode: "no-cors" });
-        console.log(res.status)
-        if (res.status >= 200 && res.status < 400) setIsValid(true);
-        else setIsValid(false);
-      } catch (err) {
-        console.error(err)
-      }
-    }
-
-    const timer = setTimeout(checkUrl, 500);
-    return () => clearTimeout(timer);
-  }, [url]);
-
-  return { url, width, height, isValid, theme };
+  return { url, width, height, theme };
 }
