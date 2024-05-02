@@ -14,11 +14,14 @@ export default function useMonday() {
   const [height, setHeight] = useState(600);
 
   useEffect(() => {
+    monday.listen("context", (res) => {
+      setTheme(res.data.theme)
+    })
+
     monday.listen("settings", (res): void => {
       setUrl(res.data.url);
       setWidth(parseInt(res.data.width));
       setHeight(parseInt(res.data.height));
-      setTheme(res.data.theme);
     });
   }, []);
 
