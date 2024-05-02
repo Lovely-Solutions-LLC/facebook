@@ -32,8 +32,8 @@ export default function useMonday() {
         console.log(res.status)
         if (res.status >= 200 && res.status < 400) setIsValid(true);
         else setIsValid(false);
-      } catch {
-        console.log("error")
+      } catch (err) {
+        console.log(err)
       }
     }
     // use debounce to avoid too many requests
