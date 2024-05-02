@@ -25,7 +25,7 @@ export default function useMonday() {
   useEffect(() => {
     async function checkUrl() {
       const res = await fetch(url);
-      if (res.ok) setIsValid(true);
+      if (res.status >= 200 || res.status < 400) setIsValid(true);
       else setIsValid(false);
     }
     // use debounce to avoid too many requests
