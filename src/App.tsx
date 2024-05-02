@@ -4,12 +4,13 @@ import useMonday from "./useMonday";
 export default function App() {
   const { url, width, height, isValid, theme } = useMonday();
 
-  if (!isValid)
+  if (!isValid) {
     return (
       <main className={`center ${theme}`}>
         <p>Please Enter a Valid Url</p>
       </main>
     );
+  }
 
   return (
     <main>
