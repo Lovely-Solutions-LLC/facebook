@@ -28,7 +28,7 @@ export default function useMonday() {
   useEffect(() => {
     async function checkUrl() {
       try {
-        const res = await fetch(url);
+        const res = await fetch(url, { mode: "no-cors" });
         console.log(res.status)
         if (res.status >= 200 && res.status < 400) setIsValid(true);
         else setIsValid(false);
@@ -36,7 +36,7 @@ export default function useMonday() {
         console.error(err)
       }
     }
-    // use debounce to avoid too many requests
+
     const timer = setTimeout(checkUrl, 500);
     return () => clearTimeout(timer);
   }, [url]);
