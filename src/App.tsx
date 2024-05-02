@@ -7,7 +7,7 @@ export default function App() {
   if (!isValid) {
     return (
       <main className={`center ${theme}`}>
-        <p>Please Enter a Valid Url</p>
+        <p>Please enter a valid URL</p>
       </main>
     );
   }

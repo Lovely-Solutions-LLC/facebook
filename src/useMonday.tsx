@@ -29,7 +29,9 @@ export default function useMonday() {
         console.log(res.status)
         if (res.status >= 200 && res.status < 400) setIsValid(true);
         else setIsValid(false);
-      } catch {}
+      } catch {
+        console.log("error")
+      }
     }
     // use debounce to avoid too many requests
     const timer = setTimeout(checkUrl, 500);
