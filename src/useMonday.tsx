@@ -9,6 +9,7 @@ const monday = mondaySdk();
 export default function useMonday() {
   const [url, setUrl] = useState("");
   const [isValid, setIsValid] = useState(false);
+  const [theme, setTheme] = useState("light");
   const [width, setWidth] = useState(300);
   const [height, setHeight] = useState(600);
 
@@ -17,6 +18,7 @@ export default function useMonday() {
       setUrl(res.data.url);
       setWidth(parseInt(res.data.width));
       setHeight(parseInt(res.data.height));
+      setTheme(res.data.theme);
     });
   }, []);
 
@@ -31,5 +33,5 @@ export default function useMonday() {
     return () => clearTimeout(timer);
   }, [url]);
 
-  return { url, width, height, isValid };
+  return { url, width, height, isValid, theme };
 }
