@@ -2,18 +2,20 @@ import { FacebookEmbed } from "react-social-media-embed";
 import useMonday from "./useMonday";
 
 export default function App() {
-  const { url, width, height } = useMonday();
-
-  if (!url) return <p>Enter a valid URL</p>;
+  const { url, width, height, isValid } = useMonday();
 
   return (
-    <div>
-      <FacebookEmbed
-        url={url}
-        width={width}
-        height={height}
-        style={{ backgroundColor: "#fff" }}
-      />
-    </div>
+    <main >
+      {isValid ? (
+        <FacebookEmbed
+          url={url}
+          width={width}
+          height={height}
+          style={{ backgroundColor: "#fff" }}
+        />
+      ) : (
+        <p>Please Enter a Valid Url</p>
+      )}
+    </main>
   );
 }

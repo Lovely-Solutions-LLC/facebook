@@ -8,6 +8,7 @@ const monday = mondaySdk();
 
 export default function useMonday() {
   const [url, setUrl] = useState("");
+  const [isValid, setIsValid] = useState(false);
   const [width, setWidth] = useState(300);
   const [height, setHeight] = useState(600);
 
@@ -19,5 +20,16 @@ export default function useMonday() {
     });
   }, []);
 
-  return { url, width, height };
+  useEffect(() => {
+    async function checkUrl() {
+      const res = await fetch(url);
+      if (res.ok) setIsValid(true);
+      else setIsValid(false);
+    }
+    // use debounce to avoid too many requests
+    const timer = setTimeout(checkUrl, 500);
+    return () => clearTimeout(timer);
+  }, [url]);
+
+  return { url, width, height, isValid };
 }

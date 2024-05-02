@@ -2,8 +2,41 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
+  margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --acc: rgb(0, 115, 234);
+  --acc-deep: rgb(0, 96, 185);
+}
+
+.light {
+  --bg: rgb(255, 255, 255);
+  --txt: rgb(0, 0, 0);
+  --txt-sec: rgb(0, 0, 0, 0.5);
+  --bg-sec: rgb(238, 238, 238);
+  --border: rgb(100, 100, 100, 0.5);
+}
+
+.dark {
+  --bg: rgb(24, 27, 52);
+  --txt: rgb(255, 255, 255);
+  --txt-sec: rgb(255, 255, 255, 0.5);
+  --bg-sec: rgb(48, 50, 78);
+  --border: rgb(100, 100, 100, 0.5);
+}
+
+.black {
+  --bg: rgb(17, 17, 17);
+  --txt: rgb(255, 255, 255);
+  --txt-sec: rgb(255, 255, 255, 0.5);
+  --bg-sec: rgb(44, 44, 44);
+  --border: rgb(100, 100, 100);
+}
+
+p {
+  color: var(--txt);
 }
