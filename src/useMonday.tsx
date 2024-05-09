@@ -17,7 +17,7 @@ export default function useMonday() {
       setTheme(res.data.theme)
     })
 
-    monday.listen("settings", (res): void => {
+    monday.listen("settings", (res) => {
       setUrl(res.data.url);
       setWidth(parseInt(res.data.width));
       setHeight(parseInt(res.data.height));
