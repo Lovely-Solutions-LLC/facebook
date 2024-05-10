@@ -13,6 +13,7 @@ export default function useMonday() {
   const [height, setHeight] = useState(600);
 
   useEffect(() => {
+    monday.execute("valueCreatedForUser")
     monday.listen("context", (res) => {
       setTheme(res.data.theme)
     })
