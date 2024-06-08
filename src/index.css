@@ -50,7 +50,7 @@ p {
 }
 
 ::-webkit-scrollbar {
-  background-color: var(--bg);
+  background-color: var(--bg-sec);
   width: 12px;
 }
 
