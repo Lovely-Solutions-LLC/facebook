@@ -1,5 +1,6 @@
 import { FacebookEmbed } from "react-social-media-embed";
 import useMonday from "./useMonday";
+import "index.css";
 
 export default function App() {
   const { url, width, height, theme, isViewer } = useMonday();
@@ -17,7 +18,7 @@ export default function App() {
           gap: 16,
         }}
       >
-        <p style={{ color: "var(--txt)" }}>Please enter a valid URL</p>
+        <p>Please enter a valid URL</p>
         <a href="https://mlinder10.github.io/howToUseFBE/" target="_blank">
           How To Use
         </a>
