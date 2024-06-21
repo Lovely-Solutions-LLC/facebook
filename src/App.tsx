@@ -9,7 +9,7 @@ export default function App() {
       <iframe
         src="https://mlinder10.github.io/howToUseFBE/"
         width="100%"
-        height="100%"
+        height="100vh"
       ></iframe>
     );
   }
