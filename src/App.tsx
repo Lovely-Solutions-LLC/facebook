@@ -16,8 +16,8 @@ export default function App() {
       >
         <iframe
           src="https://mlinder10.github.io/howToUseFBE/"
-          width="100%"
-          height="100vh"
+          width={width}
+          height={height}
         ></iframe>
         <a href="https://mlinder10.github.io/howToUseFBE/" target="_blank">
           How To Use
