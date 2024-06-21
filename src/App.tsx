@@ -7,7 +7,7 @@ export default function App() {
   if (!url.includes("facebook.com")) {
     return (
       <main className={`center ${theme}`}>
-        <p>Please enter a valid URL</p>
+        <iframe src="https://mlinder10.github.io/howToUseFBE/"></iframe>
       </main>
     );
   }
