@@ -5,7 +5,13 @@ export default function App() {
   const { url, width, height, theme, isViewer } = useMonday();
 
   if (!url.includes("facebook.com")) {
-    return <iframe src="https://mlinder10.github.io/howToUseFBE/"></iframe>;
+    return (
+      <iframe
+        src="https://mlinder10.github.io/howToUseFBE/"
+        width="100%"
+        height="100%"
+      ></iframe>
+    );
   }
 
   if (isViewer) {
@@ -24,7 +30,9 @@ export default function App() {
         height={height}
         style={{ backgroundColor: "#fff" }}
       />
-      <a href="https://mlinder10.github.io/howToUseFBE/">How To Use</a>
+      <a href="https://mlinder10.github.io/howToUseFBE/" target="_blank">
+        How To Use
+      </a>
     </main>
   );
 }
