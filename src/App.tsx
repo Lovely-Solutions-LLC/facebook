@@ -9,8 +9,8 @@ export default function App() {
       <main style={{ width: "100%", height: "100vh" }}>
         <iframe
           src="https://mlinder10.github.io/howToUseFBE/"
-          width={width}
-          height={height}
+          width="100%"
+          height="100vh"
         ></iframe>
         <a href="https://mlinder10.github.io/howToUseFBE/" target="_blank">
           How To Use
