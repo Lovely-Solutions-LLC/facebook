@@ -5,11 +5,7 @@ export default function App() {
   const { url, width, height, theme, isViewer } = useMonday();
 
   if (!url.includes("facebook.com")) {
-    return (
-      <main className={`center ${theme}`}>
-        <iframe src="https://mlinder10.github.io/howToUseFBE/"></iframe>
-      </main>
-    );
+    return <iframe src="https://mlinder10.github.io/howToUseFBE/"></iframe>;
   }
 
   if (isViewer) {
