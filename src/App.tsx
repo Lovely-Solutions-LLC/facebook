@@ -14,9 +14,10 @@ export default function App() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
+          gap: 16,
         }}
       >
-        <p>Please enter a valid URL</p>
+        <p style={{ color: "var(--txt)" }}>Please enter a valid URL</p>
         <a href="https://mlinder10.github.io/howToUseFBE/" target="_blank">
           How To Use
         </a>
