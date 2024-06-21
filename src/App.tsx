@@ -1,6 +1,5 @@
 import { FacebookEmbed } from "react-social-media-embed";
 import useMonday from "./useMonday";
-import "index.css";
 
 export default function App() {
   const { url, width, height, theme, isViewer } = useMonday();

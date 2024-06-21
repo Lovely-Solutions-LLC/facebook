@@ -49,6 +49,14 @@ p {
   color: var(--txt);
 }
 
+a {
+  color: var(--acc);
+  transition: color 0.3s ease-in-out;
+}
+a:hover {
+  color: var(--acc-deep);
+}
+
 ::-webkit-scrollbar {
   background-color: var(--bg-sec);
   width: 12px;
