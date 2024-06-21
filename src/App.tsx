@@ -20,7 +20,7 @@ export default function App() {
       >
         <p>Please enter a valid URL</p>
         <a href="https://mlinder10.github.io/howToUseFBE/" target="_blank">
-          How To Use
+          How to Use
         </a>
       </main>
     );
@@ -28,14 +28,36 @@ export default function App() {
 
   if (isViewer) {
     return (
-      <main className={`center ${theme}`}>
+      <main
+        className={theme}
+        style={{
+          width: "100%",
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: 16,
+        }}
+      >
         <p>As a viewer, you are unable to make changes</p>
+        <a href="https://mlinder10.github.io/howToUseFBE/" target="_blank">
+          How to Use
+        </a>
       </main>
     );
   }
 
   return (
-    <main>
+    <main
+      className={theme}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: 16,
+      }}
+    >
       <FacebookEmbed
         url={url}
         width={width}
@@ -43,7 +65,7 @@ export default function App() {
         style={{ backgroundColor: "#fff" }}
       />
       <a href="https://mlinder10.github.io/howToUseFBE/" target="_blank">
-        How To Use
+        How to Use
       </a>
     </main>
   );
