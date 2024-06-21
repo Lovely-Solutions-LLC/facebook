@@ -6,7 +6,14 @@ export default function App() {
 
   if (!url.includes("facebook.com")) {
     return (
-      <main style={{ width: "100%", height: "100vh" }}>
+      <main
+        style={{
+          width: "100%",
+          height: "100vh",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
         <iframe
           src="https://mlinder10.github.io/howToUseFBE/"
           width="100%"
