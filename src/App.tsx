@@ -7,6 +7,7 @@ export default function App() {
   if (!url.includes("facebook.com")) {
     return (
       <main
+        className={theme}
         style={{
           width: "100%",
           height: "100vh",
