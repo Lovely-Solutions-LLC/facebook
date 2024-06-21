@@ -6,13 +6,15 @@ export default function App() {
 
   if (!url.includes("facebook.com")) {
     return (
-      <a href="https://mlinder10.github.io/howToUseFBE/" target="_blank">
-        <iframe
-          src="https://mlinder10.github.io/howToUseFBE/"
-          width="100%"
-          height="100vh"
-        ></iframe>
-      </a>
+      <main style={{ width: "100%", height: "100vh" }}>
+        <a href="https://mlinder10.github.io/howToUseFBE/" target="_blank">
+          <iframe
+            src="https://mlinder10.github.io/howToUseFBE/"
+            width="100%"
+            height="100vh"
+          ></iframe>
+        </a>
+      </main>
     );
   }
 
