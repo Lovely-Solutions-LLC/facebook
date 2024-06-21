@@ -28,6 +28,7 @@ export default function App() {
         height={height}
         style={{ backgroundColor: "#fff" }}
       />
+      <a href="https://mlinder10.github.io/howToUseFBE/">How To Use</a>
     </main>
   );
 }
