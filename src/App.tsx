@@ -12,13 +12,11 @@ export default function App() {
           height: "100vh",
           display: "flex",
           flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
-        <iframe
-          src="https://mlinder10.github.io/howToUseFBE/"
-          width={width}
-          height={height}
-        ></iframe>
+        <p>Please enter a valid URL</p>
         <a href="https://mlinder10.github.io/howToUseFBE/" target="_blank">
           How To Use
         </a>
