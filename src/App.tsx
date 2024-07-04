@@ -1,4 +1,4 @@
-// import { FacebookEmbed } from "react-social-media-embed";
+import { FacebookEmbed } from "react-social-media-embed";
 import useMonday from "./useMonday";
 
 export default function App() {
@@ -58,19 +58,12 @@ export default function App() {
         gap: 16,
       }}
     >
-      {/* <FacebookEmbed
+      <FacebookEmbed
         url={url}
         width={width}
         height={height}
         style={{ backgroundColor: "#fff" }}
-      /> */}
-      <iframe
-        src={`https://www.facebook.com/plugins/post.php?${encodeURI(url)}`}
-        width={width}
-        height={height}
-        style={{ border: "none", overflow: "hidden" }}
-        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-      ></iframe>
+      />
       <a href="https://mlinder10.github.io/howToUseFBE/" target="_blank">
         How to Use
       </a>
