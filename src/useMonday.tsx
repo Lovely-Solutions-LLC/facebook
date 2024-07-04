@@ -3,9 +3,6 @@ import { useEffect, useState } from "react";
 
 const monday = mondaySdk();
 
-// const testUrl =
-//   "https://www.facebook.com/photo/?fbid=798354132341633&set=a.592135939630121";
-
 export default function useMonday() {
   const [url, setUrl] = useState("");
   const [isViewer, setViewer] = useState(true);
