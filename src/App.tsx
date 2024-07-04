@@ -65,9 +65,7 @@ export default function App() {
         style={{ backgroundColor: "#fff" }}
       /> */}
       <iframe
-        src={`https://www.facebook.com/plugins/post.php?${encodeURI(
-          url
-        )}&show_text=true&width=${width}`}
+        src={`https://www.facebook.com/plugins/post.php?${encodeURI(url)}`}
         width={width}
         height={height}
         style={{ border: "none", overflow: "hidden" }}
